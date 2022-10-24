@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/2022-10-24_running-r-in-azure-machine-learning/index.html",
+    "href": "posts/2022-10-24_running-r-in-azure-machine-learning/index.html",
+    "title": "Running R in Azure Machine Learning",
+    "section": "",
+    "text": "To kick-off my blog, I will start a series of posts, where I will explore the possibilities to run R on Microsoft’s cloud environment. In particular, I will focus on Azure Machine Learning (AML)."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a my blog. Welcome!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A Note to Myself",
+    "section": "",
+    "text": "Oct 24, 2022\n\n\nV-M Tikkala\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2022\n\n\nV-M Tikkala\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOct 16, 2022\n\n\nV-M Tikkala\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Welcome to my blog. The name “A Note to Myself” reflects the purpose of this blog, which is to document things that I’ve learned. I will write mainly about R and related topics, such as data analysis and visualization. Please enjoy!"
+  }
+]
