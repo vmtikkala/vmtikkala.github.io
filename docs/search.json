@@ -1,30 +1,44 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/2022-10-24_running-r-in-azure-machine-learning/index.html",
+    "href": "posts/2022-10-24_running-r-in-azure-machine-learning/index.html",
+    "title": "Running R in Azure Machine Learning",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "To kick-off my blog, I will start a series of posts, where I will explore the possibilities to run R on Microsoft’s Azure Machine Learning (AML). The first part of the series attempts to give a brief overview on the topic, while future posts will cover the different ways in more detail.\nAfter searching for information about how to use R in the AML environment, I realized that there are not that many resources online on this topic. Using Python is much more comprehensively covered, since it seems to be the de facto standard language of data science. However, R has a strong community of users and developers, so there must be someone else trying to find information about integrating R with AML. Therefore, I thought that maybe it could be useful to document my learnings and explorations in AML using R and publish them. These writings might provide help to other R users who are struggling with similar issues.\nIf you’re not familiar with Azure Machine Learning, please check Microsoft’s site for an introduction."
+  },
+  {
+    "objectID": "posts/2022-10-24_running-r-in-azure-machine-learning/index.html#using-r-in-aml",
+    "href": "posts/2022-10-24_running-r-in-azure-machine-learning/index.html#using-r-in-aml",
+    "title": "Running R in Azure Machine Learning",
+    "section": "Using R in AML",
+    "text": "Using R in AML\nFirst of all, there is a package that brings the AML functionalities to R users. It is called azuremlsdk and it was originally released in CRAN in November 2019. It contains wrapper functions that make possible to use the corresponding Python library with R utilizing reticulate package. The azuremlsdk package allows to manage AML resources, such as experiments, datasets and computes.\nHowever, the azuremlsdk R library has already been deprecated, only two years after it’s release. At the time of writing it still works, but new features cannot be expected. Deprecating the azuremlsdk package makes the future of R in AML a little bit uncertain. Maybe this blog post will be outdated soon, but meanwhile let’s continue like that never happened.\nAs far as I’m aware, there are four ways to use R in AML. They have their own features which makes the user a bit confused when starting out.\n\nCommand line interface\nAfter the deprecation of azuremlsdk, using the command line interface (CLI) is the current, Microsoft-recommended way to run R scripts in the AML platform. It is a framework for running R scripts as jobs defined by yaml files in a docker environment. There are a couple of examples on the Github repository which demonstrate the use of this approach. I will explore the use of the CLI in my next post.\n\n\nDesigner\nAML contains a Designer feature that allows the user to build calculation pipelines using a graphical user interface. It is a no-code approach where the user constructs the pipeline connecting different command components, such as datasets, machine learning algorithms, model training and evaluation steps etc. One of the available command is “Execute R script” which allows to run R code within an experiment.\n\n\nNotebooks\nJupyter notebooks are a convenient and popular way to combine code and markdown text in order to create report-like documents. AML has a possibility to use Jupyter notebooks with R kernel. The notebooks work pretty much in the same way as on a local machine.\n\n\nRStudio\nRStudio is probably the most popular IDE for developing R code. AML provides a possibility to use RStudio in a web browser, (almost) like you would use it on a local computer."
+  },
+  {
+    "objectID": "posts/2022-10-24_running-r-in-azure-machine-learning/index.html#final-words",
+    "href": "posts/2022-10-24_running-r-in-azure-machine-learning/index.html#final-words",
+    "title": "Running R in Azure Machine Learning",
+    "section": "Final words",
+    "text": "Final words\nAfter scratching a little bit on the surface, I will review the aforementioned approaches to use R within AML. Stay tuned for the upcoming posts."
   },
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "Hello World!",
     "section": "",
-    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "The purpose of this post is to check that building the site, pushing to Github and publishing using Github Pages works."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "quarto_blog",
+    "title": "A Note to Myself",
     "section": "",
-    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nOct 16, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Oct 24, 2022\n\n\nV-M Tikkala\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOct 16, 2022\n\n\nV-M Tikkala\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "Welcome to my blog. The name “A Note to Myself” reflects the purpose of this blog, which is to document things that I’ve learned. I will write mainly about R and related topics, such as data analysis and visualization. Please enjoy!"
   }
 ]

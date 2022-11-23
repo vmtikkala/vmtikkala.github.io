@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="V-M Tikkala">
-<meta name="dcterms.date" content="2022-10-16">
+<meta name="dcterms.date" content="2022-10-24">
 
-<title>A Note to Myself - Hello World!</title>
+<title>A Note to Myself - Running R in Azure Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -104,9 +104,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Hello World!</h1>
+      <h1 class="title">Running R in Azure Machine Learning</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Azure</div>
               </div>
                   </div>
   </div>
@@ -124,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 16, 2022</p>
+        <p class="date">October 24, 2022</p>
       </div>
     </div>
       
@@ -141,10 +142,37 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is the first post in a my blog. Welcome!</p>
-<p>The purpose of this post is to check that building the site, pushing to Github and publishing using Github Pages works.</p>
+<p>To kick-off my blog, I will start a series of posts, where I will explore the possibilities to run R on Microsoft’s Azure Machine Learning (AML). The first part of the series attempts to give a brief overview on the topic, while future posts will cover the different ways in more detail.</p>
+<p>After searching for information about how to use R in the AML environment, I realized that there are not that many resources online on this topic. Using Python is much more comprehensively covered, since it seems to be the <em>de facto</em> standard language of data science. However, R has a strong community of users and developers, so there must be someone else trying to find information about integrating R with AML. Therefore, I thought that maybe it could be useful to document my learnings and explorations in AML using R and publish them. These writings might provide help to other R users who are struggling with similar issues.</p>
+<p>If you’re not familiar with Azure Machine Learning, please check <a href="https://azure.microsoft.com/en-us/products/machine-learning/#product-overview">Microsoft’s site</a> for an introduction.</p>
+<section id="using-r-in-aml" class="level2">
+<h2 class="anchored" data-anchor-id="using-r-in-aml">Using R in AML</h2>
+<p>First of all, there is a package that brings the AML functionalities to R users. It is called <strong><code>azuremlsdk</code></strong> and it was originally released in CRAN in November 2019. It contains wrapper functions that make possible to use the corresponding Python library with R utilizing <strong><code>reticulate</code></strong> package. The <strong><code>azuremlsdk</code></strong> package allows to manage AML resources, such as experiments, datasets and computes.</p>
+<p>However, the <strong><code>azuremlsdk</code></strong> R library has already been deprecated, only two years after it’s release. At the time of writing it still works, but new features cannot be expected. Deprecating the <strong><code>azuremlsdk</code></strong> package makes the future of R in AML a little bit uncertain. Maybe this blog post will be outdated soon, but meanwhile let’s continue like that never happened.</p>
+<p>As far as I’m aware, there are four ways to use R in AML. They have their own features which makes the user a bit confused when starting out.</p>
+<section id="command-line-interface" class="level3">
+<h3 class="anchored" data-anchor-id="command-line-interface">Command line interface</h3>
+<p>After the deprecation of <strong><code>azuremlsdk</code></strong>, using the command line interface (CLI) is the current, Microsoft-recommended way to run R scripts in the AML platform. It is a framework for running R scripts as jobs defined by yaml files in a docker environment. There are a couple of examples on the <a href="https://github.com/Azure/azureml-sdk-for-r">Github repository</a> which demonstrate the use of this approach. I will explore the use of the CLI in my next post.</p>
+</section>
+<section id="designer" class="level3">
+<h3 class="anchored" data-anchor-id="designer">Designer</h3>
+<p>AML contains a Designer feature that allows the user to build calculation pipelines using a graphical user interface. It is a no-code approach where the user constructs the pipeline connecting different command components, such as datasets, machine learning algorithms, model training and evaluation steps etc. One of the available command is “Execute R script” which allows to run R code within an experiment.</p>
+</section>
+<section id="notebooks" class="level3">
+<h3 class="anchored" data-anchor-id="notebooks">Notebooks</h3>
+<p>Jupyter notebooks are a convenient and popular way to combine code and markdown text in order to create report-like documents. AML has a possibility to use Jupyter notebooks with R kernel. The notebooks work pretty much in the same way as on a local machine.</p>
+</section>
+<section id="rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="rstudio">RStudio</h3>
+<p>RStudio is probably the most popular IDE for developing R code. AML provides a possibility to use RStudio in a web browser, (almost) like you would use it on a local computer.</p>
+</section>
+</section>
+<section id="final-words" class="level2">
+<h2 class="anchored" data-anchor-id="final-words">Final words</h2>
+<p>After scratching a little bit on the surface, I will review the aforementioned approaches to use R within AML. Stay tuned for the upcoming posts.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
